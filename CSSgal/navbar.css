@@ -1,0 +1,89 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-weight: 400;
+  transition-duration: 0s;
+  color: cyan;
+}
+
+body {
+  background: linear-gradient(to right, #040404, #000000, #656565);
+}
+
+.logo {
+  float: left;
+  margin-left: 6%;
+  line-height: 50px;
+  font-size: 1.7em;
+}
+
+nav {
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  border-bottom: 2px solid cyan;
+  box-shadow: 0 0 20px rgba(cyan, cyan, cyan, 0.5);
+  animation: changeColor 3s linear infinite;
+ padding: 2px;
+}
+
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+nav:hover {
+  animation: none;
+  border-bottom: 2px solid cyan;
+  box-shadow: 0 0 20px rgba(cyan, cyan, cyan, 0.5);
+}
+nav:hover li a {
+  color: cyan;
+  text-shadow: 0 0 10px rgba(cyan, cyan, cyan, 0.8);
+}
+
+ul {
+  text-align: right;
+  height: 50px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgb(0, 0, 0)
+  );
+}
+
+li {
+  display: inline-block;
+}
+li:not(:first-child) {
+  padding: 0 0.1%;
+}
+li:hover a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+a {
+  text-decoration: none;
+  line-height: 50px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+}
+
+li:not(:first-child) a:hover {
+  font-weight: bold;
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid cyan;
+  background: transparent;
+  box-shadow: 0 0 5px 2px cyan;
+  transition-duration: 0.1s;
+  border-bottom: 1px solid cyan;
+  color: cyan;
+}
